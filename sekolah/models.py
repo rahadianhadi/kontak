@@ -13,9 +13,9 @@ class Sekolah(models.Model):
     email = models.EmailField(max_length=100, blank=True, null=True)
     hp = models.CharField(max_length=13, blank=True, null=True)
     alamat = models.TextField(blank=True, null=True)
-    provinsi = models.CharField(max_length=50)
-    kabupaten_kota = models.CharField(max_length=50)
-    kecamatan = models.CharField(max_length=50)
+    provinsi = models.CharField(blank=True, null=True, max_length=50)
+    kabupaten_kota = models.CharField(blank=True, null=True, max_length=50)
+    kecamatan = models.CharField(blank=True, null=True, max_length=50)
     status = models.CharField(
         max_length=10,
         choices=StatusSekolah.choices,
